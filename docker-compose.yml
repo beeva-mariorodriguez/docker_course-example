@@ -23,6 +23,14 @@ services:
       REDISPORT: "6379"
       REDISDB: "0"
 
+  hellonode:
+    build: "./hellonode"
+    image: "my/hellonode:0.1"
+    networks:
+      - "example"
+    expose:
+      - "8080"
+
 networks:
   example:
 
